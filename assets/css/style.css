@@ -417,9 +417,16 @@
     width: 100%;
     padding: 10px;
 }
+.color-black{
+    color: black;
+}
 
 .box-01:hover .box-our {
     display: flex;
+}
+.toppp{
+    top: 35%;
+    position: absolute;
 }
 
 .peomise-pera {
