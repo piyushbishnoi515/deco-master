@@ -1,0 +1,17 @@
+:root {
+    /* --color-- */
+    --color-purple: #9003E5;
+    --color-purple-dark: #8A3E74;
+    --color-black: #000000;
+    --color-white: #FFFFFF;
+    --color-blue: #010080;
+    --color-gray: #4D4D4D;
+    --color-green: #D2DA60;
+    /* -----font-size--- */
+    --fs-18: 18px;
+    --fs-36: 36px;
+    --fs-20: 20px;
+    --fs-48: 48px;
+    --fs-24: 24px;
+    --fs-64: 64px;
+}
