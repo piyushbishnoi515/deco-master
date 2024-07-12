@@ -9,6 +9,24 @@
     text-decoration: none !important;
 }
 
+.menulist::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 0%;
+    bottom: -5px;
+    height: 2px;
+    background: linear-gradient(120deg, #ff0000, #00ff00, #0000ff, #ff00ff);
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    transition: all linear 0.3s;
+}
+
+.menulist:hover::after {
+    background-position: 0 0;
+    width: 100%;
+}
+
 
 .gap-45 {
     gap: 45px;
@@ -38,10 +56,15 @@
     line-height: 27px;
     color: rgba(144, 3, 229, 1);
     text-wrap: nowrap;
+    text-decoration: none;
+    /* color: #333; */
+    font-weight: 500;
+    position: relative;
 }
 
 .menulist:hover {
     text-shadow: 0px 0px 1px var(--color-purple);
+    
 }
 
 .cursor {
@@ -81,11 +104,29 @@
     color: transparent;
     background-clip: text;
     transition: all linear 0.3s;
+    /* transition: all 0.5s ease; */
 
+}
+
+@keyframes gradientBorderAnimation {
+    0% {
+        border-image-source: linear-gradient(45deg, #ff0000, #00ff00);
+    }
+
+    50% {
+        border-image-source: linear-gradient(45deg, #00ff00, #0000ff);
+    }
+
+    100% {
+        border-image-source: linear-gradient(45deg, #0000ff, #ff00ff);
+    }
 }
 
 .color-btn:hover {
     transform: scale(0.9);
+    background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet, red);
+    animation: gradientBorderAnimation 2s linear infinite;
+    box-shadow: 0 0 30px gray;
 
 }
 
@@ -363,7 +404,8 @@
     bottom: 20px;
     left: 30px;
 }
-.color-black{
+
+.color-black {
     color: black;
 }
 
@@ -373,6 +415,14 @@
     font-weight: 700;
     line-height: 72px;
     color: var(--color-white);
+}
+
+.text-33 {
+    font-family: "Poppins", sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 72px;
+    color: var(--color-black);
 }
 
 .box-our {
@@ -394,7 +444,8 @@
 .color-black {
     color: #000000;
 }
-.color-wite{
+
+.color-wite {
     color: white;
 }
 
@@ -417,14 +468,16 @@
     width: 100%;
     padding: 10px;
 }
-.color-black{
+
+.color-black {
     color: black;
 }
 
 .box-01:hover .box-our {
     display: flex;
 }
-.toppp{
+
+.toppp {
     top: 35%;
     position: absolute;
 }
